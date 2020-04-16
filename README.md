@@ -1,4 +1,5 @@
-![Image of Ashrae Logo](https://storage.googleapis.com/kaggle-organizations/3724/thumbnail.jpg?r=592)
+<p align="center"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/ASHRAE_Logo.svg/1200px-ASHRAE_Logo.svg.png" width="300" /></p>
+# Great Energy Predictor
 ### How much energy will a building consume? <br>
 Founded in 1894, ASHRAE serves to advance the arts and sciences of heating, ventilation, air conditioning refrigeration and their allied fields. ASHRAE members represent building system design and industrial process professionals around the world. With over 54,000 members serving in 132 countries, ASHRAE supports research, standards writing, publishing and continuing education - shaping tomorrow’s built environment today.<br>
 We aim to develop accurate models of metered building energy usage in the following areas: chilled water, electric, hot water, and steam meters. The data comes from over 1,000 buildings over a three-year timeframe. With better estimates of these energy-saving investments, large scale investors and financial institutions will be more inclined to invest in this area to enable progress in building efficiencies.
@@ -13,12 +14,14 @@ The dataset can be downloaded [from](https://www.kaggle.com/c/ashrae-energy-pred
 - timestamp - When the measurement was taken
 - meter_reading - The target variable. Energy consumption in kWh (or equivalent). Note that this is real data with measurement error, which we expect will impose a baseline level of modeling error. UPDATE: as discussed here, the site 0 electric meter readings are in kBTU.
 
--> Insert No. of Building Graph<br>
+![No building pts per building id](https://user-images.githubusercontent.com/37273226/79433841-3e733080-7feb-11ea-84cf-1a5c521ef605.PNG)
+<br>
 
 On average each building has 13951.75983436853 datapoints
 Building 403 has least no. of datapoints 479
 
--> Meter Count <br>
+![Meters count](https://user-images.githubusercontent.com/37273226/79433882-4b901f80-7feb-11ea-8978-5eb5558656a7.PNG)
+<br>
 We can see that maximum datapoints are for Meter 0. Meter 0 has more data points than 1,2,3 combined.
 
 ## building_meta.csv
@@ -29,7 +32,8 @@ We can see that maximum datapoints are for Meter 0. Meter 0 has more data points
 - year_built - Year building was opened
 - floor_count - Number of floors of the building
 
--> Primary use <br>
+![primary use](https://user-images.githubusercontent.com/37273226/79433923-55b21e00-7feb-11ea-8130-e7db9f01c036.PNG)
+<br>
 We can see that most data points are for building related to Education, followed by Offices and Public Entertainment.
 
 ## weather_train.csv
@@ -44,7 +48,7 @@ Weather data from a meteorological station as close as possible to the site.
 - wind_direction - Compass direction (0-360)
 - wind_speed - Meters per second
 
--> Wind Speed <br>
+![wind speed](https://user-images.githubusercontent.com/37273226/79433949-619de000-7feb-11ea-944a-127c97a672d3.PNG)<br>
 We can see that the wind_speed data is quite discrete. Later in Preprocessing we use this to our advantage and convert this data to [Beaufort Scale](https://en.wikipedia.org/wiki/Beaufort_scale). <br>
 
 For more visualizations, correlation views etc visit the Project Notebook.
@@ -65,8 +69,7 @@ Need of Data Preprocessing<br>
 Here we will be using the Keras framework to build a Neural Network.<br>Keras is an open-source neural-network library written in Python. It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit, R, Theano, or PlaidML. Designed to enable fast experimentation with deep neural networks, it focuses on being user-friendly, modular, and extensible.
 
 ### Following is our model architecture:-
--> Model Image
-<br>
+![Model](https://user-images.githubusercontent.com/37273226/79434006-6d89a200-7feb-11ea-92aa-578d0ceee485.PNG)<br>
 We Built Separate Models and their Training loss trends for separate Meters which can be seen in our Notebook.
 
 ## Results
