@@ -1,5 +1,7 @@
-<p align="center"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/ASHRAE_Logo.svg/1200px-ASHRAE_Logo.svg.png" width="300" /></p>
-# Great Energy Predictor
+<p align="center"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/ASHRAE_Logo.svg/1200px-ASHRAE_Logo.svg.png" width="300" /></p> <br>
+
+# Great Energy Predictor 
+
 ### How much energy will a building consume? <br>
 Founded in 1894, ASHRAE serves to advance the arts and sciences of heating, ventilation, air conditioning refrigeration and their allied fields. ASHRAE members represent building system design and industrial process professionals around the world. With over 54,000 members serving in 132 countries, ASHRAE supports research, standards writing, publishing and continuing education - shaping tomorrow’s built environment today.<br>
 We aim to develop accurate models of metered building energy usage in the following areas: chilled water, electric, hot water, and steam meters. The data comes from over 1,000 buildings over a three-year timeframe. With better estimates of these energy-saving investments, large scale investors and financial institutions will be more inclined to invest in this area to enable progress in building efficiencies.
@@ -51,7 +53,7 @@ Weather data from a meteorological station as close as possible to the site.
 ![wind speed](https://user-images.githubusercontent.com/37273226/79433949-619de000-7feb-11ea-944a-127c97a672d3.PNG)<br>
 We can see that the wind_speed data is quite discrete. Later in Preprocessing we use this to our advantage and convert this data to [Beaufort Scale](https://en.wikipedia.org/wiki/Beaufort_scale). <br>
 
-For more visualizations, correlation views etc visit the Project Notebook.
+For more visualizations, correlation views etc visit the [Project Notebook](https://github.com/HOD101s/Great-Energy-Predictor/blob/master/Great%20Energy%20Predictor.ipynb).
 
 ## Data PreProcessing
 ![Image for Data PreProcessing](https://miro.medium.com/max/8332/1*wK8k8Vo8_c6jdYIjUWL_Pw.png)
@@ -59,7 +61,7 @@ Need of Data Preprocessing<br>
 - For achieving better results from the applied model in Machine Learning projects the format of the data has to be in a proper manner. Some specified Machine Learning model needs information in a specified format, for example, Random Forest algorithm does not support null values, therefore to execute random forest algorithm null values have to be managed from the original raw data set.<br>
 - Another aspect is that data set should be formatted in such a way that more than one Machine Learning and Deep Learning algorithms are executed in one data set, and best out of them is chosen.
 <br>
-  For our data we've applied **Feature engineering** across timestamp data and wind speed data and **Dropped insignificant columns**. ALong with this we have impleented **Memory Reduction** to reduce our dataset size by **65%**. All can be seen and understood in our Notebook File.
+  For our data we've applied **Feature engineering** across timestamp data and wind speed data and **Dropped insignificant columns**. ALong with this we have impleented **Memory Reduction** to reduce our dataset size by **65%**. All can be seen and understood in our [Notebook File](https://github.com/HOD101s/Great-Energy-Predictor/blob/master/Great%20Energy%20Predictor.ipynb).
 <br>
 
 ## Building a Neural Network
@@ -70,8 +72,8 @@ Here we will be using the Keras framework to build a Neural Network.<br>Keras is
 
 ### Following is our model architecture:-
 ![Model](https://user-images.githubusercontent.com/37273226/79434006-6d89a200-7feb-11ea-92aa-578d0ceee485.PNG)<br>
-We Built Separate Models and their Training loss trends for separate Meters which can be seen in our Notebook.
-
+We Built Separate Models and their Training loss trends for separate Meters which can be seen in our [Notebook
+](https://github.com/HOD101s/Great-Energy-Predictor/blob/master/Great%20Energy%20Predictor.ipynb).
 ## Results
 
 __ | Linear Regression       | Multivariate Polynomial Regression | Neural Network Non-Mean Imputed| Neural Network Mean Imputed 
